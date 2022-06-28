@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Copy & paste </title>
+</head>
+<body class="bg-primary">
+<div class="container ">            
+        <div class="card col-sm-6 offset-3 p-4 mt-3 ">
+            <div class="card-body ">
+        <h1>Generate a Random Password !</h1>
+        <i><small>stay away from using an insecure password today !</small></i>
+        <div class="form">     
+        <div>
+        <label for="sel1">Select Password Length Between <b> 8 to 32!</b></label>
+        <input type="number" value="16" min="8" max="32" class="form-control mb-3" id="length" style="width: 100px;" />
+        </div>
+        <div>
+        <input type="checkbox" class="form-check-input" id="symbol"> 
+        <label for="symbol">Symbols</label> 
+        </div>
+        <div>
+        <input type="checkbox" class="form-check-input" id="numbers"> 
+        <label for="numbers">Numbers</label> 
+        </div>
+        <div>
+        <input type="checkbox" class="form-check-input" id="uppercase"> 
+        <label for="uppercase">Uppercase Letters</label> 
+        </div>
+    </div>
+    <br>
+                    <!-- Generate  -->
+    <center><button class="btn btn-success btn-lg ">GENERATE</button></center>
+    </div>
+     <center><img src="img/loading.gif" alt="loading" style="width: 200px; height:auto;"  class ="loading"></center>
+
+    <section class="passwords mb-2">
+        
+        <div class="password" onclick="copy(this)">
+            <p></p>
+        </div>
+
+        <div class="password" onclick="copy(this)">
+            <p></p>
+        </div>
+        
+    </section> 
+            <!-- copy password  message -->
+            <div class="copy">
+                <p class="alert  alert-success text-center">Password Copied Successfully !</p>
+            </div>
+
+
+    <!-- <div class="input-group">
+        <input type="text" class="form-control form-control-md " id="input-val" >
+    <div class="input-group-append ">
+       <button onclick="copyFunction()" class="btn btn-success ">COPY</button>
+    </div>
+    </div> -->
+</div>      
+</div>
+<script src="app.js"></script>
+</body>
+</html>
